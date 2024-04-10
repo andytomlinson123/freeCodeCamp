@@ -1,0 +1,7 @@
+label {
+    display: block;
+}
+
+input[id="submit"] {
+    display: block;
+}
