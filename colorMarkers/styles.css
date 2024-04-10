@@ -1,0 +1,90 @@
+h1 {
+  text-align: center;
+}
+
+.container {
+  background-color: rgb(255, 255, 255); /* rgb is additive, 0/0/0 = black, 255/255/255 = white */
+  padding: 10px 0; /* shorthand, first is top/bottom, second is left/right */
+}
+
+.marker {
+  height: 25px; /* a div, when empty, doesn't have a default height */
+  width: 200px; /* a div, when empty, doesn't have a default width */
+  margin: 10px auto; /* shorthand, first is top/bottom, second is left/right */
+}
+
+.cap, .sleeve {
+  display: inline-block
+}
+
+.cap {
+  height: 25px;
+  width: 60px;
+}
+
+.sleeve {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 25px;
+  width: 110px;
+  border-left: 10px double rgba(0, 0, 0, 75%); /* shorthand for border-left width style color */
+}
+
+.red {
+  background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+  box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+
+.green {
+  background: linear-gradient(#55680D, #71F53E, #116C31);
+  box-shadow: 0 0 20px 0 #3B7E20CC;	
+}
+
+.blue {
+  background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+  box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+}
+
+/* primary colors: 255, or 100% intensity, in each of r/g/b */
+
+/* secondary colors: combine two primary colours
+     e.g. r+g = yellow, g+b = cyan, r+b = magenta */
+
+/* tertiary colors: combine a primary with 'nearby' (127 or 50%) secondary colour
+     e.g. r+127g = orange, g+127b = spring green, 127r+b = violet */
+
+/* three more tertiary colours...
+     127r+g = chartreuse green, 127g+b = azure, r+127b = rose / bright pink */
+
+/* color wheel - similar colors (or hues) are near each other
+               - opposite colors are complimentary
+               - two complimentary colors combined produce grey
+               - two complimentary colors side-side produce strong visual contrast (brighter)
+	       - choose one dominant color, and use its complimentary color as an accent */
+
+/* #, or hex, is another representation of rgb 
+   hex uses 0-9, A-F, 00 is 0%, FF is 100% */
+
+/* hsl, or hue saturation lightness is another way to represent color
+   hue is a value between 0-360, red: 0 degrees, green: 120 degrees, blue: 240 degrees
+   saturation is a value from 0-100%, intensity of color, 0%: gray, 100%: pure color
+   lightness is a value from 0-100%, how bright the color is, 0%: black, 100%: white, 50%: neutral */
+
+/* instead of flat color, you can also use a gradient
+   uses the background: property instead of background-color:
+   with the linear-gradient(gradientDirection, color1, color2, ...) function
+   colors can be rgb(), hex, or hsl()
+   can use a color stop, either px or % e.g. linear-gradient(90deg, red 90%, black);
+   color stops calculate automatically e.g. 0/50/100, and colors are placed evenly by default
+   if no gradientDirection is provided, it defaults to 180deg */
+
+/* opacity is how non-transparent something is, 0 or 0% is transparent, 1.0 or 100% is opaque
+   you can also achieve this using the alpha channel with a color
+   e.g. rgba(0, 0, 0, 0) where the fourth argument, for alpha, is from 0 - 1.0 */
+
+/*  box-shadow lets you apply one or more shadows around an element in px or other CSS units
+    box-shadow: offsetX offsetY blurRadius spreadRadius color;
+    offsetX + moves right, - moves left
+    offsetY + moves up, - moves down
+    if either offset value is 0, you don't need to add a unit
+    blurRadius is optional, and can be used to blur the edges
+    spreadRadius is optional, and can be used to expand the shadow further */
