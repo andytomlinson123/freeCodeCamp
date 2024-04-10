@@ -1,0 +1,104 @@
+body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+  font-family: Sans-Serif;
+  padding: 20px;
+}
+
+h1, h2 {
+  font-family: Impact, Serif; /* Serif is a fallback option */
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 0; /* the default h1 margin-top adds unnecessary space to the top of the menu */
+  margin-bottom: 15px; /* reduces the space between camper cafe and est. 2020 */
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+img {
+  display: block; /* img elements are inline by default */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -25px; /* the default h2 margin-bottom adds unnecessary space between the heading / image, negative margin-top in the img pulls them up */
+}
+
+hr {
+  background-color: brown;
+  border-color: brown; /* default border-width is 1px for all edges */
+  height: 2px; /* so total height is 4px (2px + 1px top + 1px bottom */
+}
+
+.bottom-line {
+  margin-top: 25px;
+}
+
+.established {
+  font-style: italic;
+}
+
+.menu {
+  background-color: burlywood;
+  width: 80%;
+  max-width: 500px; /* constrains width: 80% on wide screens */
+  margin-left: auto;
+  margin-right: auto;
+
+  /*padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;*/
+
+  padding: 20px /* if the spacing is the same on all four sides, you can just just padding */
+}
+
+.item p {
+  display: inline-block;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.flavor, .dessert {
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
+
+.address {
+  margin-bottom: 5px; /* the default p margin-bottom adds unnecessary space to the bottom of the menu */
+}
+
+/* FOOTER */
+
+footer {
+  font-size: 14px;
+}
+
+a {
+  color: black;
+}
+
+/* the order of the anchor psudeo-selectors seems to matter! */
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: brown;
+}
+
+a:active {
+  color: brown;
+}
