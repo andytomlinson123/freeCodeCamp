@@ -17,22 +17,10 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const weapons = [
-    {
-        name: "stick",
-        power: 5
-    },
-    {
-        name: "dagger",
-        power: 30
-    },
-    {
-        name: "claw hammer",
-        power: 50
-    },
-    {
-        name: "sword",
-        power: 100
-    }
+    { name: "stick", power: 5 },
+    { name: "dagger", power: 30 },
+    { name: "claw hammer", power: 50 },
+    { name: "sword", power: 100 }
 ];
 const monsters = [
     {
@@ -103,9 +91,9 @@ const locations = [
 ];
 
 // initialize buttons
-button1.onclick = goStore();
-button2.onclick = goCave();
-button3.onclick = fightDragon();
+button1.onclick = goStore;
+button2.onclick = goCave;
+button3.onclick = fightDragon;
 
 function update(location) {
     monsterStats.style.display = "none";
@@ -157,7 +145,7 @@ function buyWeapon() {
     } else {
         text.innerText = "You already have the most powerful weapon!";
         button2.innerText = "Sell weapon for 15 gold";
-        button2.onclick = sellWeapon();
+        button2.onclick = sellWeapon;
     }
 }
 
@@ -169,7 +157,7 @@ function sellWeapon() {
         text.innerText = "You sold a " + currentWeapon + ".";
         text.innerText += " In your inventory you have: " + inventory;
     } else {
-        text.innerText = "Don't sell your only weapon!"
+        text.innerText = "Don't sell your only weapon!";
     }
 }
 
@@ -191,7 +179,7 @@ function fightDragon() {
 function goFight() {
     update(locations[3]);
     monsterHealth = monsters[fighting].health;
-    monsterStats.style.display = 'block';
+    monsterStats.style.display = "block";
     monsterName.innerText = monsters[fighting].name;
     monsterHealthText.innerText = monsterHealth;
 }
@@ -248,7 +236,7 @@ function lose() {
     update(locations[5]);
 }
 
-function winGame () {
+function winGame() {
     update(locations[6]);
 }
 
